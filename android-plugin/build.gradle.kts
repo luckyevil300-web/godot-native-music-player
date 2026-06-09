@@ -5,15 +5,24 @@ plugins {
 
 android {
     namespace = "com.foxblack.nativemusicplayer"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+
     buildFeatures {
         buildConfig = true
     }
+}
+
+kotlin {
+    jvmToolchain(21)
 }
 
 dependencies {
