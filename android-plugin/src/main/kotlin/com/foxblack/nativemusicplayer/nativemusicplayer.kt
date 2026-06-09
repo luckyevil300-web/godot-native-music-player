@@ -1,5 +1,5 @@
 package  com.foxblack.nativemusicplayer
-class nativemusicplayer  {
+class NativeMusicPlayer  {
     fun ping(): String {
         return "pong"
     }
