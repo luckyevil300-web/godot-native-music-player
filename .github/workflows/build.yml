@@ -2,12 +2,16 @@ name: Android Plugin Build
 
 on:
   push:
-    branches: 
+    branches:
       - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: android-plugin
 
     steps:
       - name: Checkout
@@ -19,5 +23,11 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      - name: Verify Java
-        run: java -version
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Gradle Version
+        run: gradle --version
+
+      - name: Build
+        run: gradle assemble
