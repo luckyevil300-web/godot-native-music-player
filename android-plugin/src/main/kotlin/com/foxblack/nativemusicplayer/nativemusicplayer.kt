@@ -7,6 +7,14 @@ import org.godotengine.godot.plugin.UsedByGodot
 class NativeMusicPlayer(
     godot: Godot
 ) : GodotPlugin(godot) {
+
+    override fun getPluginMethods():
+    MutableList<String> {
+        return mutableListOf(
+            "ping",
+            "version"
+        )
+    }        
     
     override fun getPluginName(): String {
         return "NativeMusicPlayer"
