@@ -1,19 +1,19 @@
 plugins {
-    id("com.android.library") version "8.5.2"
-    id("org.jetbrains.kotlin.android") version "2.0.21"
+    id("com.android.library") version "8.6.1"
+    id("org.jetbrains.kotlin.android") version "2.1.21"
 }
 
 android {
     namespace = "com.foxblack.nativemusicplayer"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     buildFeatures {
@@ -22,8 +22,5 @@ android {
 }
 
 kotlin {
-    jvmToolchain(21)
-}
-
-dependencies {
+    jvmToolchain(17)
 }
