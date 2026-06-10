@@ -18,26 +18,3 @@ class NativeMusicPlayer(
 
     ...
 }
-
-    override fun getPluginMethods():
-    MutableList<String> {
-        return mutableListOf(
-            "ping",
-            "version"
-        )
-    }        
-    
-    override fun getPluginName(): String {
-        return "NativeMusicPlayer"
-    }
-    
-    @UsedByGodot
-    fun ping(): String {
-        return "pong"
-    }
-
-    @UsedByGodot
-    fun version(): String {
-        return "0.0.1"
-    }    
-}    
