@@ -2,3 +2,6 @@
 
 name="NativeMusicPlayer"
 binary_type="local"
+
+[plugin]
+classname="com.foxblack.nativemusicplayer.NativeMusicPlayer"
