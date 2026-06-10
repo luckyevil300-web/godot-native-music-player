@@ -1,9 +1,13 @@
 package  com.foxblack.nativemusicplayer
-class NativeMusicPlayer  {
-    fun ping(): String {
-        return "pong"
+
+import org.godotengine.godot.Godot
+import org.godotengine.godot.plugin.GodotPlugin
+
+class NativeMusicPlayer(
+    godot: Godot
+) : GodotPlugin(godot) {
+    
+    override fun getPluginName(): String {
+        return "NativeMusicPlayer"
     }
-    fun version(): String {
-        return "0.0.1"
-    }
-}
+}    
