@@ -1,4 +1,4 @@
-package  com.foxblack.nativemusicplayer
+package com.foxblack.nativemusicplayer
 
 import org.godotengine.godot.Godot
 import org.godotengine.godot.plugin.GodotPlugin
@@ -8,7 +8,7 @@ class NativeMusicPlayer(
     godot: Godot
 ) : GodotPlugin(godot) {
 
-   init {
+    init {
         android.util.Log.d("NativeMusicPlayer", "INIT EXECUTADO")
     }
 
@@ -16,5 +16,20 @@ class NativeMusicPlayer(
         return "NativeMusicPlayer"
     }
 
-    ...
+    override fun getPluginMethods(): MutableList<String> {
+        return mutableListOf(
+            "ping",
+            "version"
+        )
+    }
+
+    @UsedByGodot
+    fun ping(): String {
+        return "pong"
+    }
+
+    @UsedByGodot
+    fun version(): String {
+        return "0.0.1"
+    }
 }
