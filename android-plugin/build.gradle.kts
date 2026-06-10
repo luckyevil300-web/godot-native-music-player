@@ -24,3 +24,12 @@ android {
 kotlin {
     jvmToolchain(17)
 }
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly("org.godotengine:godot:4.6.3.stable")
+}
