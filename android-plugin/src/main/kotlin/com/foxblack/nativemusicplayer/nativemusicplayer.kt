@@ -8,6 +8,17 @@ class NativeMusicPlayer(
     godot: Godot
 ) : GodotPlugin(godot) {
 
+   init {
+        android.util.Log.d("NativeMusicPlayer", "INIT EXECUTADO")
+    }
+
+    override fun getPluginName(): String {
+        return "NativeMusicPlayer"
+    }
+
+    ...
+}
+
     override fun getPluginMethods():
     MutableList<String> {
         return mutableListOf(
