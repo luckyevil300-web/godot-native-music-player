@@ -13,7 +13,7 @@ class NativeMusicPlayer(
     }
 
     override fun getPluginName(): String {
-        return "NativeMusicPlayer"
+        return "FOX_TEST_PLUGIN"
     }
 
     override fun getPluginMethods(): MutableList<String> {
